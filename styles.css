@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.center {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.stylish-text {
+    font-size: 2.8em;
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff4500;
+    animation: flicker 1.5s infinite alternate;
+}
+
+.stylish-button {
+    padding: 15px 40px;
+    font-size: 1.5em;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff0000, #8b0000);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 0 20px red;
+    animation: pulse 2s infinite;
+}
+
+.stylish-button:hover {
+    background: linear-gradient(90deg, #8b0000, black);
+    box-shadow: 0 0 25px #ff4500;
+}
+
+#hacked {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hacked-logo img {
+    width: 150px;
+    margin-bottom: 20px;
+    animation: glitch 1s infinite;
+}
+
+.hacked-text {
+    font-size: 2.8em;
+    color: #ff0000;
+    animation: glitchEffect 0.7s infinite;
+}
+
+.warning {
+    font-size: 1.5em;
+    margin: 20px 0;
+    color: yellow;
+}
+
+.progress-bar {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #444;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px solid red;
+}
+
+.progress {
+    width: 0;
+    height: 20px;
+    background-color: red;
+    animation: loading 10s linear forwards;
+}
+
+#console {
+    background: black;
+    color: lime;
+    font-family: monospace;
+    padding: 20px;
+    width: 80%;
+    height: 200px;
+    overflow-y: auto;
+    margin: 20px auto;
+    border: 2px solid green;
+    box-shadow: 0 0 10px lime;
+}
+
+#matrixRain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: black;
+}
+
+@keyframes glitch {
+    0%, 100% { filter: none; }
+    50% { filter: hue-rotate(90deg); }
+}
+
+@keyframes glitchEffect {
+    0% { clip: rect(10px, 9999px, 44px, 0); transform: skew(0.3deg); }
+    20% { clip: rect(20px, 9999px, 55px, 0); transform: skew(0.5deg); }
+    40% { clip: rect(30px, 9999px, 85px, 0); transform: skew(-0.4deg); }
+    60% { clip: rect(40px, 9999px, 95px, 0); transform: skew(0.3deg); }
+    80% { clip: rect(50px, 9999px, 75px, 0); transform: skew(-0.2deg); }
+    100% { clip: rect(60px, 9999px, 55px, 0); transform: skew(0deg); }
+}
+
+@keyframes loading {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
